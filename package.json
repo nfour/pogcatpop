@@ -1,0 +1,50 @@
+{
+	"name"			: "test"
+,	"version"		: "0.1.0-alpha"
+	
+,	"dependencies": {
+		"bluebird"				: "2.10.x"
+	,	"lutils"				: "^0.2.0"
+		
+	,	"lance"					: "*"
+	,	"lactate"				: "0.13.x"
+	,	"jade"					: "*"
+	,	"stylus"				: "*"
+	
+	,	"request-promise"		: "*"
+	,	"cheerio"				: "0.19.x"
+	}
+	
+,	"devDependencies": {
+		"gulp-babel"										: "*"
+	,	"gulp"												: "*"
+	,	"babel-preset-es2015"								: "*"
+	,	"babel-register"									: "*"
+	,	"babel-plugin-transform-async-to-module-method"		: "*"
+	,	"babel-plugin-transform-es2015-modules-commonjs"	: "*"
+	,	"babel-plugin-transform-es2015-destructuring"		: "*"
+	,	"stylus"											: "0.52.x"
+	}
+	
+	
+,	"babel": {
+	"plugins": [
+		["transform-async-to-module-method", {
+			"module": "bluebird",
+			"method": "coroutine"
+	    }]
+	
+	,	"transform-es2015-modules-commonjs"
+	,	"transform-es2015-destructuring"
+
+	]
+}
+
+
+,	"scripts": {
+		"server"	: "node ./server.js"
+	,	"build"		: "gulp"
+	,	"publicate"	: "npm run build && npm publish"
+	}
+
+}

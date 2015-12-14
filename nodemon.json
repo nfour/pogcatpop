@@ -1,0 +1,13 @@
+{
+	"verbose": false
+,	"ignore": [
+		"*.css"
+	,	"*.styl"
+	,	"*.log"
+	,	"client/*"
+	]
+,	"ext" : "js coffee json"
+,	"execMap": {
+		"js": "node"
+	}
+}

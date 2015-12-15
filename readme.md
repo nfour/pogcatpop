@@ -1,4 +1,9 @@
-## Screwing about
-... with ES6 project structures.
+## Pogdesign/cat scraper
+Utlizes babel on client and server with some experimental transformers (asycn/await).
 
-This will scrape pogdesign.co.uk/cat for tv shows, then sort them to discern popularity.
+This will scrape pogdesign.co.uk/cat for all tv shows, then sort them by discern popularity when route "/" is visited.
+
+Currently scrapes:
+- Popularity
+- Name
+- Show summary url

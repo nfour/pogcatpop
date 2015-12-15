@@ -8,8 +8,10 @@
 		
 	,	"lance"					: "*"
 	,	"lactate"				: "0.13.x"
-	,	"jade"					: "*"
+	,	"ect"					: "nfour/ect"
 	,	"stylus"				: "*"
+	,	"babelify"				: "*"
+	,	"browserify"			: "*"
 	
 	,	"request-promise"		: "*"
 	,	"cheerio"				: "0.19.x"
@@ -23,6 +25,7 @@
 	,	"babel-plugin-transform-async-to-module-method"		: "*"
 	,	"babel-plugin-transform-es2015-modules-commonjs"	: "*"
 	,	"babel-plugin-transform-es2015-destructuring"		: "*"
+	,	"babel-plugin-transform-es2015-arrow-functions"		: "*"
 	,	"stylus"											: "0.52.x"
 	}
 	
@@ -36,7 +39,7 @@
 	
 	,	"transform-es2015-modules-commonjs"
 	,	"transform-es2015-destructuring"
-
+	,	"transform-es2015-arrow-functions"
 	]
 }
 

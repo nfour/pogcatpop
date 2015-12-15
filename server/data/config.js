@@ -14,13 +14,23 @@ export default {
 			saveTo: "../client/public",
 			
 			bundles: {
-				"style.css"	: "./styles/style.styl"
+				"style.css"	: "./styles/style.styl",
+				"app.js"	: "./scripts/app.js"
+			},
+			
+			browserify: {
+				transform: [
+					"babelify"
+				]
 			},
 			
 			templater: {
-				engine	: require('jade'),
-				ext		: '.jade',
-				findIn	: "./views",
+				ext		: '.ect',
+				findIn	: "../client/views",
+				options: {
+					open	: "<<",
+					close	: ">>",
+				}
 			}
 		}
 	}

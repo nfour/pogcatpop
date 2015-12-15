@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/static/style.css">
+		<script src="/static/app.js"></script>
+	</head>
+	<body>
+	
+		<table id="dataTable">
+			<thead>
+				<tr>
+					<th data-sortable-type="numeric">Popularity</th>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<< for url, show of @shows : >>
+					<tr>
+						<td><<= show.popularity >></td>
+						<td><<= show.name >></td>
+					</tr>
+				<< end >>
+			</tbody>
+		</table>
+		
+	</body>
+</html>

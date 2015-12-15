@@ -1,14 +1,18 @@
-import PopScraper from './handlers/catalog/Popularity'
+import ShowScraper from './handlers/scrapers/Shows'
+
+let cache = {}
 
 export default [
 	[ "GET", "/", async function(o) {
-		let data = { };
+		let data = {};
 		
-		
-		let scraper = new PopScraper("http://www.pogdesign.co.uk/cat/showselect.php");
-		
-		await scraper.get()
-		
+		if ( cache.data ) {
+			data = cache.data;
+		} else {
+			data.shows = await new ShowScraper("http://www.pogdesign.co.uk/cat/showselect.php").readIndex();
+			cache.data = data
+		}
+
 		o.serve.template('index', data);
 	}]
 ]

@@ -8,11 +8,11 @@ export default class Scraper {
 	}
 	
 	async get() {
-		let [ res, body ] = await request.get(this.url);
+		let body = await request.get(this.url);
 		
 		var $ = cheerio.load(body);
 		
-		return { $, res, body };
+		return { $, body };
 	}
 	
 }

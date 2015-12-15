@@ -7,3 +7,11 @@ Currently scrapes:
 - Popularity
 - Name
 - Show summary url
+
+Todo:
+- Replace `lance`
+	+ Use `express`
+	+ Use `grunt` for static assets
+		* Populate `/client/dist`
+	+ Refactor `package.json` to reflect changes
+- Impliment `jslint` config
